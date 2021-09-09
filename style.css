@@ -1,0 +1,40 @@
+body {
+    background-image: url(./img/fundo.jpg);
+    background-repeat:no-repeat;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    color: rgb(245, 238, 136);
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 70px;
+    background-color: black;
+    padding: 30px auto;
+}
+.logo{
+    height: 100%;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+footer {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    color: whitesmoke;
+    width: 100%;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 15px;
+}
