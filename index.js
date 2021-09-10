@@ -23,29 +23,27 @@ async function carregaFoto (date){
     const respost = await fetch(`https://api.nasa.gov/planetary/apod?api_key=S71UHmXOlP21f7lRzyTFo1k2VWS42Zq9TlaRnGm8&date=${date}`)
     let respostObj = await respost.json()
     console.log(respostObj)
-    mudaInfo(respostObj)
+    mudaFoto(respostObj)
 }
 
 // Mudar a informação do Copyright, Title, Url da Imagem/Video, Descrição
-function mudaInfo (respostObj) {    
+function mudaFoto (respostObj) {    
     if (`${respostObj.media_type}` === 'image'){
         mediaNode.innerHTML = `<img src="${respostObj.url}">`
-        xpto(respostObj)
+        mudaInfo(respostObj)
     } else if (`${respostObj.media_type}` === 'video'){
         mediaNode.innerHTML = `<iframe src="${respostObj.url}"></iframe>`
-        xpto(respostObj)
+        mudaInfo(respostObj)
     } else{
         mediaNode.innerHTML = `<h4>Não temos foto ou video para o dia selecionado</h4>`
         tituloNode.textContent = ""
         descricaoNode.textContent = ""
         copyrightNode.textContent = ""
     }
-
-
 }
 
-function xpto (respostObj){
+function mudaInfo (respostObj){
     tituloNode.textContent = `${respostObj.title}`
-    descricaoNode.textContent = `Descrição: ${respostObj.explanation}`
+    descricaoNode.textContent = `${respostObj.explanation}`
     copyrightNode.textContent = `Copyright: ${respostObj.copyright}`
 }
