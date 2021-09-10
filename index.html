@@ -5,30 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foto do Dia da Nasa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,700&display=swap" rel="stylesheet">    
     <script src="index.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <img src="./img/logo.png" alt="" srcset="" class='logo'>
         <h1>Projeto APOD</h1>
+        <img src="./img/logo.png" alt="" srcset="" class='logo'>    
     </header>
     <main>
         <div>
-            <p>Escolha um dia para descobrir qual a foto publicada pela Nasa:</p>
-            <input type="date" name="" id="date"> 
-            <button id="elemBtn">Escolher data</button>
+            <h2>Aqui vai entrar um texto explicativo sobre o exercicio ou sobre o Apod/Nasa</h2>
         </div>
-        <div>
-            <img src="" alt="" id="elemimagem">
-            <legend id="elemlegenda"></legend>   
-        </div>
-        <div id=fotosdasemana>
-            <p>Fotos da semana:</p>
-            <img src="" alt="">
+        <section class="container">
+            <div>
+                <div class="box">
+                    <p>Escolha um dia para descobrir qual a foto foi publicada pela Nasa:</p>
+                    <input type="date" name="" id="elemDate" > 
+                    <button id="elemBtn">Escolher data</button>
+                </div>
+                <div>
+                    <h3>Descrição: </h3>
+                    <p id='descricao'></p>
+                    <p id='copyright'></p>
+                </div>
+                
+            </div>
+            <div id= 'boxImagem'>
+                <p id='titulo'>IMAGEM DO DIA ESCOLHIDO</p>
+                <div id='media'></div>
+            
 
+            </div>
+            <!-- <div id=fotosdasemana>
+                <p>Fotos da semana:</p>
+                <img src="" alt="">
+                
+                
+            </div> -->
 
-        </div>
+        </section>
     </main>
     <footer>
         <p>por Camila Viana</p>
